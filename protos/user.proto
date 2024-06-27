@@ -1,0 +1,58 @@
+syntax= "proto 3"
+
+
+
+service userService{
+  rpc createUser(createUserRequest) returns (createUserResponse);
+  rpc getUser(getUserRequest) returns (getUserResponse);
+  rpc updateUser(updateUserRequest) returns (updateUserResponse);
+  rpc deleteUser(deleteUserRequest) returns (deleteUserResponse);
+
+}
+
+message createUserRequest{
+  
+  string username = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string password = 5;
+  int32 age = 6;
+  stirng id =7;
+}
+
+message createUserResponse{
+  string username = 1;
+  string status = 2;}
+
+message getUserRequest{
+  string username = 1;
+  string password = 2;
+}
+
+message getUserResponse{
+  string username=1;
+  string status=2;
+}
+
+message updateUserRequest{
+  string username = 1;
+  string password = 2;
+  createUserRequest newUser = 3;
+}
+
+message updateUserResponse{
+  string username=1;
+  string status=2;
+}
+
+message deleteUserRequest{
+  string username= 1;
+  string password = 2;
+}
+
+message deleteUserResponse{
+  string username=1;
+  string status=2;}
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "grpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proto-gen": "grpc_tools_node_protoc --ts_out=src/generated --proto_path=./protos ./protos/user.proto --grpc_out=src/generated"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.10",
+    "@grpc/proto-loader": "^0.7.13",
+    "mongodb": "^6.7.0",
+    "protobufjs": "^7.3.2"
+  },
+  "devDependencies": {
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "grpc-tools": "^1.12.4"
+  }
+}
